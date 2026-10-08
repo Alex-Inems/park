@@ -7,7 +7,7 @@ function lanDevOrigins() {
   for (const addrs of Object.values(os.networkInterfaces())) {
     for (const addr of addrs ?? []) {
       if (addr.internal) continue;
-      if (addr.family === "IPv4" || addr.family === 4) origins.push(addr.address);
+      if (addr.family === "IPv4" || String(addr.family) === "4") origins.push(addr.address);
     }
   }
   return origins;
