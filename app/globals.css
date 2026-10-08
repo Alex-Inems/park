@@ -19,8 +19,16 @@
   }
 }
 
+html,
 body {
-  background: var(--background);
+  height: 100%;
+  overscroll-behavior: none;
+}
+
+body {
+  background: #b7e3f7;
   color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  font-family: var(--font-geist-sans), Arial, Helvetica, sans-serif;
+  overflow: hidden;
+  touch-action: none;
 }
